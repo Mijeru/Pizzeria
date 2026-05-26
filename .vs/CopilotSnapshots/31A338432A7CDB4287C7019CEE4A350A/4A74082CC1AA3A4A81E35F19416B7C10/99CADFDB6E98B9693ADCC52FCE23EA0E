@@ -1,0 +1,57 @@
+﻿Imports MySql.Data.MySqlClient
+Public Class frmPrincipal
+    Public Shared laConnexion As Connexion
+
+    Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        laConnexion = New Connexion()
+
+        ' ---  Masquer les contrôles de sélection de borne ---
+        cbNumBorne.Visible = False
+        lbNumBorne.Visible = False
+        btnValider.Visible = False
+
+        CollectionPizzas.Remplir()
+        CollectionMenus.Remplir()
+        CollectionSupplements.Remplir()
+        CollectionServeurs.Remplir()
+        CollectionBornes.Remplir()
+    End Sub
+    ' Variable globale : borne choisie par le serveur
+    Public Shared numBorne As Integer
+
+    ' Variable globale : serveur connecté
+    Public Shared leServeur As Serveur
+
+
+    Private Sub tblogin_TextChanged(sender As Object, e As EventArgs) Handles tblogin.TextChanged, tblogin.TextChanged
+
+    End Sub
+
+    Private Sub tbMDP_TextChanged(sender As Object, e As EventArgs) Handles tbMDP.TextChanged, tbMDP.TextChanged
+
+    End Sub
+
+    Private Sub cbNumCaisse_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbNumCaisse.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnValider_Click(sender As Object, e As EventArgs) Handles btnValider.Click
+
+    End Sub
+
+    Private Sub btnConnexion_Click(sender As Object, e As EventArgs) Handles btnConnexion.Click
+        For Each unServeur In CollectionServeurs.lesServeurs
+            If unServeur.Authentifier(tblogin.Text, tbMDP.Text) Then
+                trouve = True
+                leServeur = unServeur
+                Exit For
+            End If
+        Next
+
+        If trouve Then
+            ' afficher la sélection de borne
+        Else
+            MessageBox.Show("Identifiant ou mot de passe incorrect.", "Erreur de connexion", MessageBoxButtons.OK)
+        End If
+    End Sub
+End Class

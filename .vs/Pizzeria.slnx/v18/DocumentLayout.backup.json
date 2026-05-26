@@ -1,0 +1,298 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\commande.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\commande.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\frmsaisie.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\frmsaisie.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\frmsaisie.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\frmsaisie.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\connexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\connexion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\serveur.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\serveur.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\menupizzeria.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\menupizzeria.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\collectionsupplements.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\collectionsupplements.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\collectionmenus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\collectionmenus.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\collectionserveurs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\collectionserveurs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\collectionpizzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\collectionpizzas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\collectionbornes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\collectionbornes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\pizza.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\pizza.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|c:\\users\\starty\\source\\repos\\pizzeria\\pizzeria\\supplement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{67C13B24-6DB4-4531-93FC-F875AA88090B}|Pizzeria\\Pizzeria.vbproj|solutionrelative:pizzeria\\supplement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Application.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\My Project\\Application.Designer.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\My Project\\Application.Designer.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\My Project\\Application.Designer.vb",
+              "RelativeToolTip": "Pizzeria\\My Project\\Application.Designer.vb",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T19:58:54.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CollectionSupplements.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionSupplements.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\CollectionSupplements.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionSupplements.vb",
+              "RelativeToolTip": "Pizzeria\\CollectionSupplements.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T19:22:18.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CollectionMenus.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionMenus.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\CollectionMenus.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionMenus.vb",
+              "RelativeToolTip": "Pizzeria\\CollectionMenus.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T19:22:00.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmSaisie.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmSaisie.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\frmSaisie.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmSaisie.vb",
+              "RelativeToolTip": "Pizzeria\\frmSaisie.vb",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAvwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T19:14:40.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmSaisie.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmSaisie.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\frmSaisie.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmSaisie.vb [Design]",
+              "RelativeToolTip": "Pizzeria\\frmSaisie.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T19:09:18.746Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CollectionBornes.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionBornes.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\CollectionBornes.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionBornes.vb",
+              "RelativeToolTip": "Pizzeria\\CollectionBornes.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:55:59.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CollectionPizzas.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionPizzas.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\CollectionPizzas.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionPizzas.vb",
+              "RelativeToolTip": "Pizzeria\\CollectionPizzas.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:55:26.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CollectionServeurs.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionServeurs.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\CollectionServeurs.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\CollectionServeurs.vb",
+              "RelativeToolTip": "Pizzeria\\CollectionServeurs.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:54:58.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Commande.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Commande.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\Commande.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Commande.vb",
+              "RelativeToolTip": "Pizzeria\\Commande.vb",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAgwH0BAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:53:59.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Serveur.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Serveur.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\Serveur.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Serveur.vb",
+              "RelativeToolTip": "Pizzeria\\Serveur.vb",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:53:35.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuPizzeria.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\MenuPizzeria.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\MenuPizzeria.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\MenuPizzeria.vb",
+              "RelativeToolTip": "Pizzeria\\MenuPizzeria.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:53:17.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "supplement.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\supplement.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\supplement.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\supplement.vb",
+              "RelativeToolTip": "Pizzeria\\supplement.vb",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:52:54.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "pizza.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\pizza.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\pizza.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\pizza.vb",
+              "RelativeToolTip": "Pizzeria\\pizza.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:52:30.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Connexion.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Connexion.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\Connexion.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\Connexion.vb",
+              "RelativeToolTip": "Pizzeria\\Connexion.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:46:58.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmPrincipal.vb",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmPrincipal.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\frmPrincipal.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmPrincipal.vb",
+              "RelativeToolTip": "Pizzeria\\frmPrincipal.vb",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:38:27.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPrincipal.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmPrincipal.vb",
+              "RelativeDocumentMoniker": "Pizzeria\\frmPrincipal.vb",
+              "ToolTip": "C:\\Users\\STARTY\\source\\repos\\Pizzeria\\Pizzeria\\frmPrincipal.vb [Design]",
+              "RelativeToolTip": "Pizzeria\\frmPrincipal.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-05-26T18:26:01.162Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

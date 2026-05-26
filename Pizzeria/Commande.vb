@@ -1,0 +1,384 @@
+﻿Public Class Commande
+
+    ' --- Attributs ---
+    Private Shared m_compteur As Integer = 0
+    Private m_numCommande As Integer
+    Private m_dateCommande As DateTime
+    Private m_numBorne As Integer
+    Private m_modeReglement As String
+    Private m_lesProduits As New List(Of Object)
+
+    ' --- Constructeur ---
+    Public Sub New(numBorne As Integer)
+        m_compteur += 1
+        m_numCommande = m_compteur
+        m_dateCommande = DateTime.Now
+        m_numBorne = numBorne
+        m_modeReglement = ""
+    End Sub
+
+    ' --- Getter numéro commande partagé ---
+    Public Shared ReadOnly Property Compteur() As Integer
+        Get
+            Return m_compteur
+        End Get
+    End Property
+
+    Public Function LireNumCommande() As Integer
+        Return m_numCommande
+    End Function
+
+    Public Function LireDateCommande() As DateTime
+        Return m_dateCommande
+    End Function
+
+    Public Function LireNumBorne() As Integer
+        Return m_numBorne
+    End Function
+
+    Public Function LireModeReglement() As String
+        Return m_modeReglement
+    End Function
+
+    ' --- Ajouter un article (pizza, menu ou supplément) ---
+    Public Sub AjouterArticle(unArticle As Object)
+        m_lesProduits.Add(unArticle)
+    End Sub
+
+    ' --- Supprimer un article par index ---
+    Public Sub SupprimerArticle(index As Integer)
+        If index >= 0 AndAlso index < m_lesProduits.Count Then
+            m_lesProduits.RemoveAt(index)
+        End If
+    End Sub
+
+    ' --- Saisir le mode de règlement ---
+    Public Sub SaisirMode(mode As String)
+        m_modeReglement = mode
+    End Sub
+
+    ' --- Calcul du total HT ---
+    Public Function CalculTotalHT() As Decimal
+        Dim total As Decimal = 0
+        For Each unProduit In m_lesProduits
+            If TypeOf unProduit Is Pizza Then
+                total += DirectCast(unProduit, Pizza).LirePrixHT()
+            ElseIf TypeOf unProduit Is MenuPizzeria Then
+                total += DirectCast(unProduit, MenuPizzeria).LirePrixHT()
+            ElseIf TypeOf unProduit Is Supplement Then
+                total += DirectCast(unProduit, Supplement).LirePrixHT()
+            End If
+        Next
+        Return Math.Round(total, 2)
+    End Function
+
+    ' --- Calcul TVA ---
+    Public Function CalculTVA() As Decimal
+        Return Math.Round(CalculTotalHT() * 0.1D, 2)
+    End Function
+
+    ' --- Calcul TTC ---
+    Public Function CalculTotalTTC() As Decimal
+        Return Math.Round(CalculTotalHT() + CalculTVA(), 2)
+    End Function
+
+    ' --- Éditer le ticket client ---
+    Public Sub EditerTicketClient()
+        Dim frmTicket As New Form()
+        frmTicket.Text = "Ticket client"
+        frmTicket.Width = 450
+        frmTicket.Height = 600
+        frmTicket.StartPosition = FormStartPosition.CenterScreen
+
+        Dim ordo As Integer = 10
+
+        ' En-tête
+        Dim lbTitre As New Label()
+        lbTitre.Text = "🍕 La Bella Napoli"
+        lbTitre.Font = New Font("Arial", 14, FontStyle.Bold)
+        lbTitre.TextAlign = ContentAlignment.MiddleCenter
+        lbTitre.Location = New Point(10, ordo)
+        lbTitre.Width = 400
+        frmTicket.Controls.Add(lbTitre)
+        ordo += 35
+
+        Dim lbNumCommande As New Label()
+        lbNumCommande.Text = "Commande N° " & m_numCommande
+        lbNumCommande.Font = New Font("Arial", 10, FontStyle.Regular)
+        lbNumCommande.Location = New Point(10, ordo)
+        lbNumCommande.Width = 400
+        frmTicket.Controls.Add(lbNumCommande)
+        ordo += 25
+
+        Dim lbDateHeure As New Label()
+        lbDateHeure.Text = "Le " & m_dateCommande.ToString("dd/MM/yyyy") & " à " & m_dateCommande.ToString("HH:mm")
+        lbDateHeure.Font = New Font("Arial", 10, FontStyle.Regular)
+        lbDateHeure.Location = New Point(10, ordo)
+        lbDateHeure.Width = 400
+        frmTicket.Controls.Add(lbDateHeure)
+        ordo += 25
+
+        Dim lbBorne As New Label()
+        lbBorne.Text = "Borne N° " & m_numBorne
+        lbBorne.Font = New Font("Arial", 10, FontStyle.Regular)
+        lbBorne.Location = New Point(10, ordo)
+        lbBorne.Width = 400
+        frmTicket.Controls.Add(lbBorne)
+        ordo += 30
+
+        Dim lbTitreArticles As New Label()
+        lbTitreArticles.Text = "Articles commandés :"
+        lbTitreArticles.Font = New Font("Arial", 10, FontStyle.Bold)
+        lbTitreArticles.Location = New Point(10, ordo)
+        lbTitreArticles.Width = 400
+        frmTicket.Controls.Add(lbTitreArticles)
+        ordo += 25
+
+        For Each unProduit In m_lesProduits
+            Dim nom As String = ""
+            Dim prix As Decimal = 0
+
+            If TypeOf unProduit Is Pizza Then
+                nom = DirectCast(unProduit, Pizza).LireNomPizza()
+                prix = DirectCast(unProduit, Pizza).LirePrixHT()
+            ElseIf TypeOf unProduit Is MenuPizzeria Then
+                nom = DirectCast(unProduit, MenuPizzeria).LireLibelle()
+                prix = DirectCast(unProduit, MenuPizzeria).LirePrixHT()
+            ElseIf TypeOf unProduit Is Supplement Then
+                nom = "Suppl. " & DirectCast(unProduit, Supplement).LireLibelle()
+                prix = DirectCast(unProduit, Supplement).LirePrixHT()
+            End If
+
+            Dim lbNomArticle As New Label()
+            lbNomArticle.Text = nom
+            lbNomArticle.Font = New Font("Arial", 9, FontStyle.Regular)
+            lbNomArticle.Location = New Point(10, ordo)
+            lbNomArticle.Width = 280
+            lbNomArticle.TextAlign = ContentAlignment.MiddleLeft
+            frmTicket.Controls.Add(lbNomArticle)
+
+            Dim lbPrixArticle As New Label()
+            lbPrixArticle.Text = prix.ToString("0.00") & " €"
+            lbPrixArticle.Font = New Font("Arial", 9, FontStyle.Regular)
+            lbPrixArticle.Location = New Point(300, ordo)
+            lbPrixArticle.Width = 100
+            lbPrixArticle.TextAlign = ContentAlignment.MiddleRight
+            frmTicket.Controls.Add(lbPrixArticle)
+
+            ordo += 22
+        Next
+
+        ' Trait séparateur
+        Dim lbTrait As New Label()
+        lbTrait.BackColor = Color.Black
+        lbTrait.Location = New Point(5, ordo)
+        lbTrait.Size = New Size(400, 2)
+        frmTicket.Controls.Add(lbTrait)
+        ordo += 10
+
+        Dim lbMontantHT As New Label()
+        lbMontantHT.Text = "Total HT :"
+        lbMontantHT.Font = New Font("Arial", 9, FontStyle.Regular)
+        lbMontantHT.Location = New Point(10, ordo)
+        lbMontantHT.Width = 280
+        frmTicket.Controls.Add(lbMontantHT)
+        Dim lbHT As New Label()
+        lbHT.Text = CalculTotalHT().ToString("0.00") & " €"
+        lbHT.Font = New Font("Arial", 9, FontStyle.Regular)
+        lbHT.Location = New Point(300, ordo)
+        lbHT.Width = 100
+        lbHT.TextAlign = ContentAlignment.MiddleRight
+        frmTicket.Controls.Add(lbHT)
+        ordo += 22
+
+        Dim lbMontantTVA As New Label()
+        lbMontantTVA.Text = "TVA (10%) :"
+        lbMontantTVA.Font = New Font("Arial", 9, FontStyle.Regular)
+        lbMontantTVA.Location = New Point(10, ordo)
+        lbMontantTVA.Width = 280
+        frmTicket.Controls.Add(lbMontantTVA)
+        Dim lbTVA As New Label()
+        lbTVA.Text = CalculTVA().ToString("0.00") & " €"
+        lbTVA.Font = New Font("Arial", 9, FontStyle.Regular)
+        lbTVA.Location = New Point(300, ordo)
+        lbTVA.Width = 100
+        lbTVA.TextAlign = ContentAlignment.MiddleRight
+        frmTicket.Controls.Add(lbTVA)
+        ordo += 22
+
+        ' Trait séparateur
+        Dim lbTrait2 As New Label()
+        lbTrait2.BackColor = Color.Black
+        lbTrait2.Location = New Point(5, ordo)
+        lbTrait2.Size = New Size(400, 2)
+        frmTicket.Controls.Add(lbTrait2)
+        ordo += 10
+
+        Dim lbMontantTTC As New Label()
+        lbMontantTTC.Text = "TOTAL TTC :"
+        lbMontantTTC.Font = New Font("Arial", 10, FontStyle.Bold)
+        lbMontantTTC.Location = New Point(10, ordo)
+        lbMontantTTC.Width = 280
+        frmTicket.Controls.Add(lbMontantTTC)
+        Dim lbTTC As New Label()
+        lbTTC.Text = CalculTotalTTC().ToString("0.00") & " €"
+        lbTTC.Font = New Font("Arial", 10, FontStyle.Bold)
+        lbTTC.Location = New Point(300, ordo)
+        lbTTC.Width = 100
+        lbTTC.TextAlign = ContentAlignment.MiddleRight
+        frmTicket.Controls.Add(lbTTC)
+        ordo += 30
+
+        Dim lbModeReglement As New Label()
+        lbModeReglement.Text = "Règlement : " & m_modeReglement
+        lbModeReglement.Font = New Font("Arial", 9, FontStyle.Regular)
+        lbModeReglement.Location = New Point(10, ordo)
+        lbModeReglement.Width = 400
+        frmTicket.Controls.Add(lbModeReglement)
+        ordo += 30
+
+        Dim lbMerci As New Label()
+        lbMerci.Text = "Merci de votre visite ! Buon appetito !"
+        lbMerci.Font = New Font("Arial", 10, FontStyle.Italic)
+        lbMerci.TextAlign = ContentAlignment.MiddleCenter
+        lbMerci.Location = New Point(10, ordo)
+        lbMerci.Width = 400
+        frmTicket.Controls.Add(lbMerci)
+
+        frmTicket.ShowDialog()
+    End Sub
+
+    ' --- Éditer le ticket cuisine ---
+    Public Sub EditerTicketCuisine()
+        Dim frmCuisine As New Form()
+        frmCuisine.Text = "Ticket cuisine"
+        frmCuisine.Width = 350
+        frmCuisine.Height = 500
+        frmCuisine.StartPosition = FormStartPosition.CenterScreen
+
+        Dim ordo As Integer = 10
+
+        ' En-tête
+        Dim lbTitre As New Label()
+        lbTitre.Text = "🍕 BON DE COMMANDE CUISINE"
+        lbTitre.Font = New Font("Arial", 12, FontStyle.Bold)
+        lbTitre.ForeColor = Color.Red
+        lbTitre.TextAlign = ContentAlignment.MiddleCenter
+        lbTitre.Location = New Point(5, ordo)
+        lbTitre.Width = 320
+        frmCuisine.Controls.Add(lbTitre)
+        ordo += 35
+
+        Dim lbNumCommande As New Label()
+        lbNumCommande.Text = "Commande N° " & m_numCommande & "  –  Borne N° " & m_numBorne
+        lbNumCommande.Font = New Font("Arial", 10, FontStyle.Bold)
+        lbNumCommande.Location = New Point(5, ordo)
+        lbNumCommande.Width = 320
+        frmCuisine.Controls.Add(lbNumCommande)
+        ordo += 25
+
+        Dim lbHeure As New Label()
+        lbHeure.Text = "Heure : " & m_dateCommande.ToString("HH:mm")
+        lbHeure.Font = New Font("Arial", 10, FontStyle.Regular)
+        lbHeure.Location = New Point(5, ordo)
+        lbHeure.Width = 320
+        frmCuisine.Controls.Add(lbHeure)
+        ordo += 30
+
+        ' Trait séparateur
+        Dim lbTrait As New Label()
+        lbTrait.BackColor = Color.Black
+        lbTrait.Location = New Point(5, ordo)
+        lbTrait.Size = New Size(320, 2)
+        frmCuisine.Controls.Add(lbTrait)
+        ordo += 10
+
+        ' Liste des articles sans prix
+        Dim i As Integer = 1
+        For Each unProduit In m_lesProduits
+            Dim nom As String = ""
+            Dim type As String = ""
+
+            If TypeOf unProduit Is Pizza Then
+                nom = DirectCast(unProduit, Pizza).LireNomPizza()
+                type = "Pizza"
+            ElseIf TypeOf unProduit Is MenuPizzeria Then
+                nom = DirectCast(unProduit, MenuPizzeria).LireLibelle()
+                type = "Menu"
+            ElseIf TypeOf unProduit Is Supplement Then
+                nom = DirectCast(unProduit, Supplement).LireLibelle()
+                type = "Supplément"
+            End If
+
+            Dim lbArticle As New Label()
+            lbArticle.Text = i & ".  [" & type & "]  " & nom
+            lbArticle.Font = New Font("Arial", 10, FontStyle.Regular)
+            lbArticle.Location = New Point(5, ordo)
+            lbArticle.Width = 320
+            frmCuisine.Controls.Add(lbArticle)
+            ordo += 25
+            i += 1
+        Next
+
+        frmCuisine.ShowDialog()
+    End Sub
+
+    ' --- Enregistrer la commande en base de données ---
+    Public Sub EnregistrerCommande(codeServeur As String)
+        Dim connexion As MySql.Data.MySqlClient.MySqlConnection = frmPrincipal.laConnexion.m_connexion
+
+        ' Insérer dans la table commande
+        ' Préparer les montants au format invariant (séparateur décimal '.')
+        Dim montantTTC As String = CalculTotalTTC().ToString(System.Globalization.CultureInfo.InvariantCulture)
+
+        Dim requeteCommande As String = "INSERT INTO commande (DateHeureCommande, ModeReglement, MontantTTC, NumBorne, CodeServeur) " &
+                                        "VALUES ('" & m_dateCommande.ToString("yyyy-MM-dd HH:mm:ss") & "', " &
+                                        "'" & m_modeReglement.Replace("'", "''") & "', " &
+                                        montantTTC & ", " &
+                                        m_numBorne & ", " &
+                                        "'" & codeServeur & "')"
+        Dim cmdCommande As New MySql.Data.MySqlClient.MySqlCommand(requeteCommande, connexion)
+        cmdCommande.ExecuteNonQuery()
+
+        ' Récupérer le numéro de commande généré
+        Dim requeteId As String = "SELECT LAST_INSERT_ID()"
+        Dim cmdId As New MySql.Data.MySqlClient.MySqlCommand(requeteId, connexion)
+        Dim numCommandeBD As Integer = cmdId.ExecuteScalar()
+
+        ' Insérer chaque article dans ligne_commande
+        Dim numLigne As Integer = 1
+        For Each unProduit In m_lesProduits
+            Dim typeArticle As String = ""
+            Dim refArticle As Integer = 0
+            Dim prixUnitaire As Decimal = 0
+
+            If TypeOf unProduit Is Pizza Then
+                typeArticle = "pizza"
+                refArticle = DirectCast(unProduit, Pizza).LireNumPizza()
+                prixUnitaire = DirectCast(unProduit, Pizza).LirePrixHT()
+            ElseIf TypeOf unProduit Is MenuPizzeria Then
+                typeArticle = "menu"
+                refArticle = DirectCast(unProduit, MenuPizzeria).LireNumMenu()
+                prixUnitaire = DirectCast(unProduit, MenuPizzeria).LirePrixHT()
+            ElseIf TypeOf unProduit Is Supplement Then
+                typeArticle = "supplement"
+                refArticle = DirectCast(unProduit, Supplement).LireNumSupplement()
+                prixUnitaire = DirectCast(unProduit, Supplement).LirePrixHT()
+            End If
+            ' Utiliser la culture invariante pour insérer le prix avec '.' comme séparateur décimal
+            Dim prixFormate As String = prixUnitaire.ToString(System.Globalization.CultureInfo.InvariantCulture)
+
+            Dim requiteLigne As String = "INSERT INTO ligne_commande (NumCommande, NumLigne, TypeArticle, RefArticle, QteArticle, PrixUnitaireHT) " &
+                                         "VALUES (" & numCommandeBD & ", " &
+                                         numLigne & ", " &
+                                         "'" & typeArticle & "', " &
+                                         refArticle & ", " &
+                                         "1, " &
+                                         prixFormate & ")"
+            Dim cmdLigne As New MySql.Data.MySqlClient.MySqlCommand(requiteLigne, connexion)
+            cmdLigne.ExecuteNonQuery()
+            numLigne += 1
+        Next
+    End Sub
+
+End Class
